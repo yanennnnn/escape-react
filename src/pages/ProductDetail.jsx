@@ -32,28 +32,28 @@ function ProductDetail() {
             <div className="card-body">
               <form className="row">
                 <div className="mb-3">
-                  <label htmlFor="產品名稱" className="form-label">產品名稱</label>
+                  <label htmlFor="title" className="form-label">產品名稱</label>
                   <input type="text" className="form-control" id="title" value={state.title} onChange={ handleChange } />
                 </div>
 
                 <div className="col-md-6">
                   <div className="mb-3">
-                    <label htmlFor="產品定價" className="form-label">產品定價</label>
+                    <label htmlFor="origin_price" className="form-label">產品定價</label>
                     <input type="text" className="form-control" id="origin_price" value={state.origin_price} onChange={ handleChange }/>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="mb-3">
-                    <label htmlFor="產品售價" className="form-label">產品售價</label>
+                    <label htmlFor="price" className="form-label">產品售價</label>
                     <input type="text" className="form-control" id="price" value={state.price} onChange={ handleChange }/>
                   </div>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="產品分類" className="form-label">產品分類</label>
+                  <label htmlFor="category" className="form-label">產品分類</label>
                   <input type="text" className="form-control" id="category" value={state.category} onChange={ handleChange }/>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="產品描述" className="form-label">產品描述</label>
+                  <label htmlFor="content" className="form-label">產品描述</label>
                   <textarea className="form-control" id="content" value={state.content} onChange={ handleChange }/>
                 </div>
               </form>
@@ -75,8 +75,6 @@ function ProductDetail() {
           </div>
         </div>
       </div>
-
-
     </div>
   )
 }
