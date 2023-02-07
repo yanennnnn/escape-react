@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 function Product() {
+  //  會回傳一個包含兩個值的 array，第一個值是 state、第二個值是用來更新 state 的函式。每當 state 值改變，就會觸發 re-render
+  //  useState([]); 表示初始值是陣列[]
   const [products, setProducts] = useState([]);
   const getData = () => {
     axios.get(`${process.env.REACT_APP_URL}api/react/products`)

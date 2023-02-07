@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 function ProductDetail() {
   const [state, setState] = useState({});
+  // 當我們在 Router 中使用動態參數的設計方式時，總是會需要取得 URL 上的 id 值。
+  // 而 hooks 提供了 useParams 讓我們可以更方便的取得 id 值。 
+  // 而不用再透過 this.props.match.params 的方式取得這個值。
   const { productId } = useParams();
   
   useEffect(() => {
@@ -12,7 +15,9 @@ function ProductDetail() {
         setState(response.data.product);
       });
   }, [])
-
+// 透過onChange事件偵測表單的input（也就是輸入欄位內的內容值）是否發生改變
+// 如果使用者輸入資訊
+// handleChange函式會被觸發並呼叫組件內的setState函式
   function handleChange(event) {
     const { id, value } = event.target;
     setState({
